@@ -2,6 +2,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      PC: { min: "1200px" },
+      Tablet: { min: "768px", max: "1199px" },
+      Mobile: { min: "375px", max: "767px" },
+    },
     extend: {
       fontFamily: {
         sans: ["Pretendard", "sans-serif"],
@@ -9,7 +14,7 @@ export default {
       colors: {
         "landing-light": "#f1f4fd",
         "landing-bold": "#ecf0fa",
-        "background": "#ffffff",
+        background: "#ffffff",
         "gray-100": "#f7f7fa",
         "gray-200": "#e4e5f0",
         "gray-300": "#c6cada",
@@ -36,12 +41,12 @@ export default {
         "4xl": ["40px", { lineHeight: "42px" }],
         "3xl": ["32px", { lineHeight: "42px" }],
         "2xl": ["24px", { lineHeight: "32px" }],
-        "xl": ["20px", { lineHeight: "32px" }],
+        xl: ["20px", { lineHeight: "32px" }],
         "2lg": ["18px", { lineHeight: "26px" }],
-        "lg": ["16px", { lineHeight: "26px" }],
-        "md": ["14px", { lineHeight: "24px" }],
-        "sm": ["13px", { lineHeight: "22px" }],
-        "xs": ["12px", { lineHeight: "18px" }],
+        lg: ["16px", { lineHeight: "26px" }],
+        md: ["14px", { lineHeight: "24px" }],
+        sm: ["13px", { lineHeight: "22px" }],
+        xs: ["12px", { lineHeight: "18px" }],
       },
     },
   },
