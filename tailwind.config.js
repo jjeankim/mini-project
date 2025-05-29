@@ -9,7 +9,7 @@ export default {
       colors: {
         "landing-light": "#f1f4fd",
         "landing-bold": "#ecf0fa",
-        background: "#ffffff",
+        "background": "#ffffff",
         "gray-100": "#f7f7fa",
         "gray-200": "#e4e5f0",
         "gray-300": "#c6cada",
