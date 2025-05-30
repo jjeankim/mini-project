@@ -3,6 +3,7 @@ import "./App.css";
 import Nav from "./components/common/Nav";
 import CafeMain from "./components/cafe/CafeMain";
 import RestaurantMain from "./components/restaurant/RestaurantMain";
+import CafeDetail from "./components/cafe/CafeDetail";
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
       <Routes>
         <Route path="/" />
         <Route path="/stay" />
-        <Route path="/cafes" element={<CafeMain />}/>
-        <Route path="/restaurants" element={<RestaurantMain />} />
+        <Route path="/cafe" element={<CafeMain />}/>
+        <Route path="/cafe/:id" element={<CafeDetail />} />
+        <Route path="/restaurant" element={<RestaurantMain />} />
         <Route path="/trending" />
         <Route path="/sightseeing" />
       </Routes>
