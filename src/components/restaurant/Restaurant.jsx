@@ -1,9 +1,9 @@
-import { IMG_BAS_URL } from "../../api/fetch";
+import { IMG_BAS_URL } from "../../constant/url";
 import { getTagList } from "../../utils/getTags";
 
 const Restaurant = ({ restaurant }) => {
   return (
-    <div className="w-[250px] max-h-[500px] text-center border-[1px] p-[20px] rounded-lg">
+    <div className="w-[250px] h-[400px] text-center border-[1px] p-[20px] rounded-lg">
       <img
         className="w-[200px] h-[200px] rounded-lg"
         src={`${IMG_BAS_URL}/${restaurant.CON_IMGFILENAME}`}

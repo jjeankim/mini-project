@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { getTagList } from "../../utils/getTags";
-import { IMG_BAS_URL } from "../../api/fetch";
+import { IMG_BAS_URL } from "../../constant/url";
 
 const CafeDetail = () => {
   const location = useLocation();

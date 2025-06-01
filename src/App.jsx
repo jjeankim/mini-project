@@ -4,15 +4,16 @@ import Nav from "./components/common/Nav";
 import CafeMain from "./components/cafe/CafeMain";
 import RestaurantMain from "./components/restaurant/RestaurantMain";
 import CafeDetail from "./components/cafe/CafeDetail";
+import MainSwiper from "./components/common/MainSwiper";
 
 function App() {
   return (
     <BrowserRouter>
       <Nav />
       <Routes>
-        <Route path="/" />
+        <Route path="/" element={<MainSwiper />} />
         <Route path="/stay" />
-        <Route path="/cafe" element={<CafeMain />}/>
+        <Route path="/cafe" element={<CafeMain />} />
         <Route path="/cafe/:id" element={<CafeDetail />} />
         <Route path="/restaurant" element={<RestaurantMain />} />
         <Route path="/trending" />

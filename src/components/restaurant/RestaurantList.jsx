@@ -4,8 +4,8 @@ const RestaurantList = ({ restaurantList }) => {
   
   return (
     <ul className="flex gap-[20px] flex-wrap">
-      {restaurantList.map((restaurant) => (
-        <li key={restaurant.CON_UID}>
+      {restaurantList.map((restaurant,i) => (
+        <li key={i}>
           <Restaurant restaurant={restaurant} />
         </li>
       ))}

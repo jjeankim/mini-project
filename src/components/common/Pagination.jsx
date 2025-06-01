@@ -1,7 +1,7 @@
-const Button = ({ children, ...rest }) => {
+const Button = ({ children,className, ...rest }) => {
   return (
     <button
-      className="py-[8px] px-[16px] border-[1px] border-gray-400 rounded-md text-2lg font-semibold text-gray-400 font-sans hover:bg-green-100 hover:text-background hover:border-green-100"
+      className={`py-[8px] px-[16px] border-[1px] border-gray-400 rounded-md text-2lg font-semibold text-gray-400 font-sans hover:bg-green-100 hover:text-background hover:border-green-100 ${className}`}
       {...rest}
     >
       {children}
@@ -16,12 +16,10 @@ const Pagination = ({ page, setPage, totalCount }) => {
 
   if (totalPage <= 1) return null;
   let startPage;
-  let calNum;
 
   if (totalPage <= maxPage) startPage = 1;
   else {
-    calNum = Math.ceil(page / maxPage);
-    startPage = (calNum - 1) * maxPage + 1;
+    startPage = (Math.floor((page - 1) / maxPage)) * maxPage + 1;
   }
 
   const pageArr = Array.from(
@@ -32,21 +30,23 @@ const Pagination = ({ page, setPage, totalCount }) => {
   );
 
   const handleClickPrev = () => {
-    setPage(page - 1);
+    if (page > 1) setPage(page - 1);
   };
 
   const handleClickNext = () => {
-    setPage(page + 1);
+    if(page < totalPage) setPage(page + 1);
   };
   return (
     <nav className="flex gap-[20px] m-[30px] justify-center">
-      <Button  type="button" onClick={handleClickPrev}>
+      <Button type="button" onClick={handleClickPrev}>
         &lt;
       </Button>
-      {pageArr.map((page) => (
-        <Button>{page}</Button>
+      {pageArr.map((pageNum) => (
+        <Button className={`${pageNum === page ? "bg-green-100 border-green-100 text-white":""}`} key={pageNum} onClick={() => setPage(pageNum)}>
+          {pageNum}
+        </Button>
       ))}
-      <Button  type="button" onClick={handleClickNext}>
+      <Button type="button" onClick={handleClickNext}>
         &gt;
       </Button>
     </nav>
