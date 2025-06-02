@@ -4,9 +4,7 @@ import Main from "../common/Main";
 import Pagination from "../common/Pagination";
 import AddMoreBtn from "../common/AddMoreBtn";
 import useFetch from "../../hook/useFetch";
-
-const CAFE_BASE_URL =
-  "https://apis.data.go.kr/5050000/cafeInfoService/getCafeInfo?serviceKey=0iqHiUl6ckW8fz8x6JSsFFaZvFaMBZVwckobRhG2pBez3lAOuq9tizDhLNj2mWued0EkmPOfHwvR51bXAephDA==";
+import { CAFE_BASE_URL } from "../../constant/url";
 
 const CafeMain = () => {
   const [page, setPage] = useState(1);

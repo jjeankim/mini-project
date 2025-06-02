@@ -36,7 +36,7 @@ const MainSwiper = () => {
     <div
       className={`relative flex items-center bg-green-100 h-[600px] mt-[112px] overflow-visible transition-colors duration-500 ${images[currentIndex].bgColor}`}
     >
-      <div className="flex-1 px-12 z-10 absolute left-[20%] bottom-[30%]">
+      <div className="flex-1 px-12 z-10 absolute left-[5%] bottom-[30%]">
         <span className=" bg-black text-white text-2lg py-[0.5rem] px-[0.8rem] rounded-2xl rounded-bl">
           {images[currentIndex].subTitle}
         </span>

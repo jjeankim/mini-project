@@ -21,8 +21,6 @@ const RestaurantMain = () => {
     }
   }, [fetchData, page]);
 
-  console.log(restaurantList);
-  console.log(totalCount);
   if (error) return <div>데이터를 불러오지 못했습니다.</div>;
   if (isLoading) return <div>데이터 불러오는 중...</div>;
   return (
