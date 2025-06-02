@@ -24,7 +24,7 @@ const SightSeeingMain = () => {
   }, [fetchData, page]);
 
   if (error) return <div>데이터를 불러오지 못했습니다.</div>;
-  if (isLoading) return <div>데이터 불러오는 중...</div>;
+  if (isLoading) return <div className="w-[100vw] h-[100vh] bg-black opacity-5">데이터 불러오는 중...</div>;
 
   return (
     <Main title="경주 권역별 관광지">
