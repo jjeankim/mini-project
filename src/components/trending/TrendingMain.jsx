@@ -4,6 +4,8 @@ import useFetch from "../../hook/useFetch";
 import Main from "../common/Main";
 import TreandingList from "./TreandingList";
 
+
+
 const TrendingMain = () => {
   const ref = useRef(1);
 
@@ -30,6 +32,7 @@ const TrendingMain = () => {
 
   return <Main title="황리단길 핫 플레이스">
     <TreandingList trendingList={trendingList}/>
+
   </Main>;
 };
 
