@@ -8,7 +8,7 @@ const Stay = ({stay}) => {
     nav(`/stay/${stay.CON_UID}`,{state:stay})
   }
   return (
-    <div onClick={handleClickCard} className="w-[250px] max-h-[500px] text-center rounded-lg cursor-pointer mb-[1rem]">
+    <div onClick={handleClickCard} className="w-full max-h-[500px] text-center rounded-lg cursor-pointer mb-[1rem]">
       <img
         className="w-full h-[200px] rounded-lg"
         src={`${IMG_BAS_URL}/${stay.CON_IMGFILENAME}`}

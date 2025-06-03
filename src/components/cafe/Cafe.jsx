@@ -12,10 +12,10 @@ const Cafe = ({ cafe }) => {
   return (
     <div
       onClick={handleClickCard}
-      className="w-[250px] h-[400px] text-center border-[1px] p-[20px] rounded-lg overflow-hidden"
+      className="w-[100%] h-[400px] text-center border-[1px] p-[20px] rounded-lg overflow-hidden"
     >
       <img
-        className="w-[200px] h-[200px] rounded-lg"
+        className="w-[100%] h-[200px] rounded-lg"
         src={`${IMG_BAS_URL}/${cafe.CON_IMGFILENAME}`}
         alt={`${cafe.CON_TITLE} 사진`}
       />

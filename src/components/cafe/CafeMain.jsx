@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import CafeList from "./CafeList";
 import Main from "../common/Main";
-import Pagination from "../common/Pagination";
 import AddMoreBtn from "../common/AddMoreBtn";
 import useFetch from "../../hook/useFetch";
 import { CAFE_BASE_URL } from "../../constant/url";
@@ -22,9 +21,6 @@ const CafeMain = () => {
       setTotalCount(fetchData.response.body.totalCount);
     }
   }, [fetchData, page]);
-
-  console.log(cafeList);
-  console.log(totalCount); //77
 
   if (error) return <div>데이터를 불러오지 못했습니다.</div>
   if (isLoading) return <div>데이터 불러오는 중...</div>

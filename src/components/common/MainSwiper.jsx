@@ -24,7 +24,7 @@ const images = [
     src: "/images/main3.jpg",
     title: "첨성대의 이야기 ",
     subTitle: "천년의 시간 🌟",
-    bgColor: "bg-blue-50",
+    bgColor: "bg-blue-100",
     to: "/sightseeing",
   },
 ];
