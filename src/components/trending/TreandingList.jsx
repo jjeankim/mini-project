@@ -3,7 +3,7 @@ import Trending from "./Trending"
 const TreandingList = ({trendingList}) => {
   return (
     
-    <ul className="flex gap-[20px] flex-wrap justify-center">
+    <ul className="grid grid-cols-5 gap-5">
         {trendingList.map((trending, i) => (
           <li key={i}>
             <Trending trending={trending} />

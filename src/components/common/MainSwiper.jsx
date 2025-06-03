@@ -24,7 +24,7 @@ const images = [
     src: "/images/main3.jpg",
     title: "첨성대의 이야기 ",
     subTitle: "천년의 시간 🌟",
-    bgColor: "bg-blue-100",
+    bgColor: "bg-blue-50",
     to: "/sightseeing",
   },
 ];
@@ -34,7 +34,7 @@ const MainSwiper = () => {
 
   return (
     <div
-      className={`relative flex items-center bg-green-100 h-[600px] mt-[112px] overflow-visible transition-colors duration-500 ${images[currentIndex].bgColor}`}
+      className={`relative flex items-center h-[600px] mt-[112px] overflow-visible transition-colors duration-500 ${images[currentIndex].bgColor}`}
     >
       <div className="flex-1 px-12 z-10 absolute left-[5%] bottom-[30%]">
         <span className=" bg-black text-white text-2lg py-[0.5rem] px-[0.8rem] rounded-2xl rounded-bl">
@@ -63,11 +63,11 @@ const MainSwiper = () => {
           onSlideChange={(swiper) => {
             setCurrentIndex(swiper.realIndex);
           }}
-          // autoplay={{
-          //   delay: 3000,
-          //   disableOnInteraction: false,
-          // }}
-          // loof={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          loof={"true"}
         >
           {images.map((img, i) => (
             <SwiperSlide key={i}>

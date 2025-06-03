@@ -12,7 +12,7 @@ const Cafe = ({ cafe }) => {
   return (
     <div
       onClick={handleClickCard}
-      className="w-[100%] h-[400px] text-center border-[1px] p-[20px] rounded-lg overflow-hidden"
+      className="w-[100%] h-[400px] text-center border-[1px] p-[20px] rounded-lg overflow-hidden cursor-pointer"
     >
       <img
         className="w-[100%] h-[200px] rounded-lg"

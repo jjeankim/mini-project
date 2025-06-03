@@ -3,6 +3,7 @@ import { STAY_BASE_URL } from "../../constant/url"
 import useFetch from "../../hook/useFetch"
 import Main from "../common/Main"
 import StayList from "./StayList"
+import LoadingSpinner from "../common/LoadingSpinner"
 
 const StayMain = () => {
   const pageRef = useRef(1)
@@ -66,7 +67,7 @@ const StayMain = () => {
   return (
     <Main title="경주 테마별 숙소">
       <StayList stayList={stayList} />
-      {isLoading && <div>로딩 중...</div>}
+      {isLoading && <LoadingSpinner />}
       {stayList.length >= totalCount && (
         <div>더이상 불러올 데이터가 없어요.</div>
       )}

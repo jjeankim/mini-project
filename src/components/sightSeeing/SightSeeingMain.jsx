@@ -3,7 +3,6 @@ import Main from "../common/Main";
 import { SIGHT_SEEING_BASE_URL } from "../../constant/url";
 import useFetch from "../../hook/useFetch";
 import SightSeeingList from "./SightSeeingList";
-import Pagination from "../common/Pagination";
 import AddMoreBtn from "../common/AddMoreBtn";
 
 const SightSeeingMain = () => {

@@ -9,9 +9,12 @@ const Restaurant = ({ restaurant }) => {
     nav(`/restaurant/${restaurant.CON_UID}`,{state:restaurant})
   }
   return (
-    <div onClick={handleClickCard} className="w-[250px] h-[400px] text-center border-[1px] p-[20px] rounded-lg">
+    <div
+      onClick={handleClickCard}
+      className="w-[100%] h-[400px] text-center border-[1px] p-[20px] rounded-lg overflow-hidden cursor-pointer"
+    >
       <img
-        className="w-[200px] h-[200px] rounded-lg"
+        className="w-[100%] h-[200px] rounded-lg"
         src={`${IMG_BAS_URL}/${restaurant.CON_IMGFILENAME}`}
         alt={`${restaurant.CON_TITLE} 사진`}
       />

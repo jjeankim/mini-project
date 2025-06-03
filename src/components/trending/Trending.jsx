@@ -1,10 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import { getAddress } from "../../utils/getAddress.js"
+import { IMG_BAS_URL } from "../../constant/url.js";
 
 const Trending = ({ trending }) => {
   const nav = useNavigate();
 
-  console.log(getAddress(trending.CON_DESC1))
   const handleClickCard = () => {
     nav(`/trending/${trending.CODE_UID}`, { state: trending });
   };
@@ -12,7 +11,7 @@ const Trending = ({ trending }) => {
   return (
     <div
       onClick={handleClickCard}
-      className="w-[250px] max-h-[500px] text-center rounded-lg cursor-pointer mb-[1rem]"
+      className="w-full max-h-[500px] text-center rounded-lg cursor-pointer mb-[1rem]"
     >
       <img
         className="w-full h-[200px] rounded-lg"
@@ -22,7 +21,7 @@ const Trending = ({ trending }) => {
       <h4 className="text-xl font-semibold my-[0.5rem]">
         {trending.CON_TITLE}
       </h4>
-      <p className="text-sm text-gray-400">{getAddress(trending.CON_DESC1).join(" ")}</p>
+      <p className="text-sm text-gray-400">{trending.CON_DESC1}</p>
     </div>
   );
 };

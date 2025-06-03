@@ -33,7 +33,7 @@ const SightSeeingList = ({ sightSeeingList }) => {
       <ul className="flex flex-col gap-[20px] ">
         {filterdList.map((sightSeeing, i) => (
           <li key={i}>
-            <SigntSeeing signtSeeing={sightSeeing} />
+            <SigntSeeing sightSeeing={sightSeeing} />
           </li>
         ))}
       </ul>
