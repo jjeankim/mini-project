@@ -30,7 +30,7 @@ const navList = [
 
 const Nav = () => {
   return (
-    <nav className="flex items-center p-[20px] shadow-md z-50 fixed w-full bg-background">
+    <nav className="flex items-center p-[20px] shadow-md z-50 fixed top-0 left-0 right-0 bg-background">
       <div className="flex-1">
         <Link to={"/"}>
           <h1>

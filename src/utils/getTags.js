@@ -3,6 +3,6 @@ export const getTagList = (str) =>
     .split(",")
     .map((tag) => tag.trim())
     .filter((tag) => tag.length > 0)
-    .map((tag) => `# ${tag}`)
+    .map((tag) => `#${tag}`)
     .join("")
    
