@@ -27,7 +27,7 @@ const MainCardList = ({ url, title, type }) => {
       <button
         type="button"
         onClick={handleClickBtn}
-        className="absolute right-0 top-[2rem] text-gray-400 underline underline-offset-4 "
+        className="absolute right-0 top-[1rem] text-gray-400 underline underline-offset-4 "
       >
         더 알아보기
       </button>

@@ -91,7 +91,10 @@ const MainSwiper = () => {
           </button>
         </div>
       </div>
-      <div className="flex flex-col justify-center my-[20rem] mx-[10rem] ">
+      <div className="mt-[20rem] mx-[10rem]">
+        <h2 className="text-3xl font-semibold bg-green-100 text-white rounded p-[0.5rem]">천년고도 경주를 즐기자!</h2>
+      </div>
+      <div className="flex flex-col justify-center mt-[2rem] mb-[10rem] mx-[10rem] ">
         <MainCardList
           url={`${TRENDING_BASE_URL}&pageNo=1&numOfRows=5`}
           title="황리단길 | 핫플레이스"

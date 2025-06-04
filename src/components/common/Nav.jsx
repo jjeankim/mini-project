@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Weather from "../home/Weather";
 
 const navList = [
   {
@@ -36,7 +37,7 @@ const Nav = () => {
           <h1>
             <img
               className="w-[100px] h-[80px]"
-              src="/images/logo3.png"
+              src="/images/logo.png"
               alt="경주 문화 정보 관광 로고"
             />
           </h1>
@@ -54,7 +55,9 @@ const Nav = () => {
           ))}
         </ul>
       </div>
-      <div className="flex-1"></div>
+      <div className="flex-1">
+        <Weather />
+      </div>
     </nav>
   );
 };
