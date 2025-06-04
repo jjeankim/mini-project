@@ -31,8 +31,8 @@ const navList = [
 
 const Nav = () => {
   return (
-    <nav className="flex items-center p-[20px] shadow-md z-50 fixed top-0 left-0 right-0 bg-background">
-      <div className="flex-1">
+    <nav className="p-[20px] shadow-md z-50 fixed top-0 left-0 right-0 bg-background py-[40px]">
+      <div className="absolute top-[50%] left-[40px] transform translate-y-[-50%]">
         <Link to={"/"}>
           <h1>
             <img
@@ -43,8 +43,8 @@ const Nav = () => {
           </h1>
         </Link>
       </div>
-      <div className="flex-3 flex justify-center">
-        <ul className="flex gap-[100px]">
+      <div className="flex justify-center w-[1280px] mx-auto">
+        <ul className="flex gap-[50px]">
           {navList.map((menu) => (
             <li
               className="text-xl font-semibold Tablet:text-md Mobile:text-sm"
@@ -55,7 +55,7 @@ const Nav = () => {
           ))}
         </ul>
       </div>
-      <div className="flex-1">
+      <div className="absolute top-[50%] right-[40px] transform translate-y-[-50%]">
         <Weather />
       </div>
     </nav>

@@ -35,78 +35,85 @@ const MainSwiper = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <>
+    <div>
       <div
-        className={`relative flex items-center h-[600px] mt-[112px] overflow-visible transition-colors duration-500 ${images[currentIndex].bgColor}`}
+        className={`relative h-[600px] mt-[70px] ${images[currentIndex].bgColor}`}
       >
-        <div className="flex-1 px-12 z-10 absolute left-[5%] bottom-[30%]">
-          <span className=" bg-black text-white text-2lg py-[0.5rem] px-[0.8rem] rounded-2xl rounded-bl">
-            {images[currentIndex].subTitle}
-          </span>
-          <h2 className="mt-[40px] text-[50px] font-bold mb-4 text-gray-800">
-            {images[currentIndex].title}
+        <div className="w-[1280px] mx-auto my-0 flex items-center justify-between">
+          <div className="">
+            <span className=" bg-black text-white text-2lg py-[0.5rem] px-[0.8rem] rounded-2xl rounded-bl">
+              {images[currentIndex].subTitle}
+            </span>
+            <h2 className="mt-[40px] text-[50px] font-bold mb-4 text-gray-800">
+              {images[currentIndex].title}
+            </h2>
+            <Link
+              to={images[currentIndex].to}
+              className="text-lg text-gray-400 underline underline-offset-[6px]"
+            >
+              자세히 보기
+            </Link>
+          </div>
+          <div className="w-[800px] relative top-[120px]">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              slidesPerView={1}
+              navigation={{
+                nextEl: ".custom-next",
+                prevEl: ".custom-prev",
+              }}
+              pagination={{ clickable: true }}
+              // className="w-full h-full"
+              onSlideChange={(swiper) => {
+                setCurrentIndex(swiper.realIndex);
+              }}
+              // autoplay={{
+              //   delay: 3000,
+              //   disableOnInteraction: false,
+              // }}
+              // loof={"true"}
+            >
+              {images.map((img, i) => (
+                <SwiperSlide key={i}>
+                  <img
+                    src={img.src}
+                    alt={`Slide ${i + 1}`}
+                    className="object-cover w-full h-full rounded-lg"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <button className="custom-prev absolute bottom-[8%] left-[-12rem] z-30">
+              &lt;
+            </button>
+            <span className="absolute bottom-[8%] left-[-9rem] z-30">||</span>
+            <button className="custom-next absolute bottom-[8%] left-[-6rem] z-30">
+              &gt;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-[260px] mx-auto w-[1280px]">
+        <div>
+          <h2 className="text-3xl font-semibold bg-green-100 text-white rounded p-[16px]">
+            천년고도 경주를 즐기자!
           </h2>
-          <Link
-            to={images[currentIndex].to}
-            className="text-lg text-gray-400 underline underline-offset-[6px]"
-          >
-            자세히 보기
-          </Link>
         </div>
-        <div className="absolute top-[50px] right-[10%] w-[50%] h-[700px] shadow-lg z-20">
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            slidesPerView={1}
-            navigation={{
-              nextEl: ".custom-next",
-              prevEl: ".custom-prev",
-            }}
-            pagination={{ clickable: true }}
-            className="w-full h-full"
-            onSlideChange={(swiper) => {
-              setCurrentIndex(swiper.realIndex);
-            }}
-            // autoplay={{
-            //   delay: 3000,
-            //   disableOnInteraction: false,
-            // }}
-            // loof={"true"}
-          >
-            {images.map((img, i) => (
-              <SwiperSlide key={i}>
-                <img
-                  src={img.src}
-                  alt={`Slide ${i + 1}`}
-                  className="object-cover w-full h-full rounded-lg"
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <button className="custom-prev absolute bottom-[8%] left-[-12rem] z-30">
-            &lt;
-          </button>
-          <span className="absolute bottom-[8%] left-[-9rem] z-30">||</span>
-          <button className="custom-next absolute bottom-[8%] left-[-6rem] z-30">
-            &gt;
-          </button>
+        <div className="flex flex-col gap-[20px] mt-[40px]">
+          <MainCardList
+            url={`${TRENDING_BASE_URL}&pageNo=1&numOfRows=5`}
+            title="황리단길 | 핫플레이스"
+            type="핫플레이스"
+          />
+          <MainCardList
+            url={`${SIGHT_SEEING_BASE_URL}&pageNo=1&numOfRows=5`}
+            title="경주 여행하기 좋은 곳"
+            type="관광지"
+          />
         </div>
       </div>
-      <div className="mt-[20rem] mx-[10rem]">
-        <h2 className="text-3xl font-semibold bg-green-100 text-white rounded p-[0.5rem]">천년고도 경주를 즐기자!</h2>
-      </div>
-      <div className="flex flex-col justify-center mt-[2rem] mb-[10rem] mx-[10rem] ">
-        <MainCardList
-          url={`${TRENDING_BASE_URL}&pageNo=1&numOfRows=5`}
-          title="황리단길 | 핫플레이스"
-          type="핫플레이스"
-        />
-        <MainCardList
-          url={`${SIGHT_SEEING_BASE_URL}&pageNo=1&numOfRows=5`}
-          title="경주 여행하기 좋은 곳"
-          type="관광지"
-        />
-      </div>
-    </>
+    </div>
   );
 };
 
