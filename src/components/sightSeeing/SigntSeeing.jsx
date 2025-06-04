@@ -4,7 +4,7 @@ const SightSeeing = ({ sightSeeing }) => {
   const nav = useNavigate();
 
   const handleClickCard = () => {
-    nav(`/sightSeeing/${sightSeeing.CODE_UID}`, { state: sightSeeing });
+    nav(`/sightSeeing/${sightSeeing.CON_UID}`, { state: sightSeeing });
   };
   return (
     <div onClick={handleClickCard} className="flex gap-[2rem] border-t pt-[1rem] cursor-pointer">
@@ -16,7 +16,7 @@ const SightSeeing = ({ sightSeeing }) => {
       <div className="">
         <h4 className="text-2xl font-semibold mb-[0.5rem]">{sightSeeing.CON_TITLE}</h4>
         <p className="text-sm text-gray-400 mb-[1rem]" >{sightSeeing.CON_DESC1}</p>
-        <span className="text-sm border p-[8px] rounded-3xl border-green-200 text-green-200" >{sightSeeing.AREA_NAME}</span>
+        <span className="text-sm p-[8px] text-blue-500" >{`#${sightSeeing.AREA_NAME}`}</span>
       </div>
     </div>
   );

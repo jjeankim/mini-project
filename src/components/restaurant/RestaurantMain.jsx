@@ -4,6 +4,7 @@ import { RESTAURANT_BASE_URL } from "../../constant/url";
 import Main from "../common/Main";
 import Pagination from "../common/Pagination";
 import useFetch from "../../hook/useFetch";
+import LoadingSpinner from "../common/LoadingSpinner";
 
 const RestaurantMain = () => {
   const [page, setPage] = useState(1);
@@ -21,11 +22,12 @@ const RestaurantMain = () => {
     }
   }, [fetchData, page]);
 
-  if (error) return <div>데이터를 불러오지 못했습니다.</div>;
-  if (isLoading) return <div>데이터 불러오는 중...</div>;
+  if (error) return <div>데이터를 불러오지 못했습니다.</div>
+
   return (
     <Main title="경주 테마별 음식점">
       <RestaurantList restaurantList={restaurantList} />
+      {isLoading && <LoadingSpinner />}
       <Pagination page={page} setPage={setPage} totalCount={totalCount} />
     </Main>
   );

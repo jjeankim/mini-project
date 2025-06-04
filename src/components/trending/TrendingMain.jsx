@@ -4,6 +4,7 @@ import useFetch from "../../hook/useFetch";
 import Main from "../common/Main";
 import TreandingList from "./TreandingList";
 import EndOfData from "../common/EndOfData";
+import LoadingSpinner from "../common/LoadingSpinner"
 
 const TrendingMain = () => {
   const pageRef = useRef(1);
@@ -16,7 +17,7 @@ const TrendingMain = () => {
   const [totalCount, setTotalCount] = useState(null);
 
   useEffect(() => {
-    if (fetchData?.response?.body) {
+    if (fetchData?.response.body) {
       const newData = fetchData.response.body.items.item;
       if (pageRef.current === 1) {
         setTrendingList(newData);
@@ -57,12 +58,12 @@ const TrendingMain = () => {
     };
   }, [handleObserver]);
 
-  if (error) return <div>데이터를 불러오지 못했습니다.</div>;
+  if (error) return <div>데이터를 불러오지 못했습니다.</div>
 
   return (
     <Main title="황리단길 핫 플레이스">
       <TreandingList trendingList={trendingList} />
-      {isLoading && <div>로딩 중...</div>}
+      {isLoading && <LoadingSpinner />}
       {trendingList.length >= totalCount && <EndOfData />}
       <div ref={observerRef}></div>
     </Main>

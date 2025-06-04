@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SigntSeeing from "./SigntSeeing";
 
 const region = [
@@ -10,13 +10,19 @@ const region = [
   "보문관광단지권",
   "남산권",
 ];
-const SightSeeingList = ({ sightSeeingList }) => {
+const SightSeeingList = ({ sightSeeingList, setIsFiltered }) => {
   const [filterRegion, setFilterRegion] = useState("전체");
+
+
+  useEffect(() => {
+    setIsFiltered(filterRegion !== '전체')
+  },[filterRegion,setIsFiltered])
 
   const filterdList =
     filterRegion === "전체"
       ? sightSeeingList
       : sightSeeingList.filter((item) => item.AREA_NAME === filterRegion);
+
   return (
     <>
       <div className="mb-[2rem]">

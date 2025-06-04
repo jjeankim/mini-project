@@ -4,6 +4,7 @@ import useFetch from "../../hook/useFetch"
 import Main from "../common/Main"
 import StayList from "./StayList"
 import LoadingSpinner from "../common/LoadingSpinner"
+import EndOfData from "../common/EndOfData"
 
 const StayMain = () => {
   const pageRef = useRef(1)
@@ -69,7 +70,7 @@ const StayMain = () => {
       <StayList stayList={stayList} />
       {isLoading && <LoadingSpinner />}
       {stayList.length >= totalCount && (
-        <div>더이상 불러올 데이터가 없어요.</div>
+        <EndOfData />
       )}
       <div ref={observerRef}></div>
     </Main>

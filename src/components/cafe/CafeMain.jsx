@@ -4,6 +4,7 @@ import Main from "../common/Main";
 import AddMoreBtn from "../common/AddMoreBtn";
 import useFetch from "../../hook/useFetch";
 import { CAFE_BASE_URL } from "../../constant/url";
+import LoadingSpinner from "../common/LoadingSpinner";
 
 const CafeMain = () => {
   const [page, setPage] = useState(1);
@@ -23,7 +24,6 @@ const CafeMain = () => {
   }, [fetchData, page]);
 
   if (error) return <div>데이터를 불러오지 못했습니다.</div>
-  if (isLoading) return <div>데이터 불러오는 중...</div>
 
   return (
     <Main title="경주 카페 및 전통 찻집">
@@ -34,6 +34,10 @@ const CafeMain = () => {
         totalCount={totalCount}
         isLoading={isLoading}
       />
+      {isLoading && <LoadingSpinner />}
+      {/* {cafeList.length >= totalCount && (
+        <div>더이상 불러올 데이터가 없어요.</div>
+      )} */}
     </Main>
   );
 };

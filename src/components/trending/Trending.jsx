@@ -5,7 +5,7 @@ const Trending = ({ trending }) => {
   const nav = useNavigate();
 
   const handleClickCard = () => {
-    nav(`/trending/${trending.CODE_UID}`, { state: trending });
+    nav(`/trending/${trending.CON_UID}`, { state: trending });
   };
 
   return (
