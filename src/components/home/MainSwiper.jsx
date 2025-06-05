@@ -63,15 +63,15 @@ const MainSwiper = () => {
                 prevEl: ".custom-prev",
               }}
               pagination={{ clickable: true }}
-              // className="w-full h-full"
+              
               onSlideChange={(swiper) => {
                 setCurrentIndex(swiper.realIndex);
               }}
-              // autoplay={{
-              //   delay: 3000,
-              //   disableOnInteraction: false,
-              // }}
-              // loof={"true"}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              loof={"true"}
             >
               {images.map((img, i) => (
                 <SwiperSlide key={i}>

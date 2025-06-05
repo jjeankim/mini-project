@@ -25,7 +25,7 @@ const SightSeeingList = ({ sightSeeingList }) => {
           <span
             onClick={() => setFilterRegion(area)}
             key={i}
-            className="text-sm border p-[8px] mr-[1rem] rounded-3xl border-green-200 text-green-200 hover:bg-green-200 hover:text-white"
+            className="text-sm border p-[8px] mr-[1rem] rounded-3xl border-green-200 text-green-200 cursor-pointer hover:bg-green-200 hover:text-white"
           >
             {area}
           </span>

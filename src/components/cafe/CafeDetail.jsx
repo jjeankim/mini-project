@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import {  useLocation } from "react-router-dom";
 import { IMG_BAS_URL } from "../../constant/url";
 import getSanitizeHTML from "../../utils/getSanitizedHTLM";
 import prefixImageSrc from "../../utils/prefixImageSrc";

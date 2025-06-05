@@ -35,9 +35,7 @@ const CafeMain = () => {
         isLoading={isLoading}
       />
       {isLoading && <LoadingSpinner />}
-      {/* {cafeList.length >= totalCount && (
-        <div>더이상 불러올 데이터가 없어요.</div>
-      )} */}
+      
     </Main>
   );
 };

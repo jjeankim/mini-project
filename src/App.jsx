@@ -12,6 +12,7 @@ import StayDetail from "./components/stay/StayDetail";
 import SightSeeingDetail from "./components/sightSeeing/SightSeeingDetail";
 import TrendingDetail from "./components/trending/TrendingDetail";
 import Footer from "./components/common/Footer";
+import NotFound from "./components/common/NotFound";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/trending/:id" element={<TrendingDetail />} />
         <Route path="/sightseeing" element={<SightSeeingMain />} />
         <Route path="/sightseeing/:id" element={<SightSeeingDetail />} />
+        <Route path="*" element={<NotFound />}/>
       </Routes>
       <Footer />
     </BrowserRouter>

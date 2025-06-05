@@ -47,7 +47,7 @@ const Nav = () => {
         <ul className="flex gap-[50px]">
           {navList.map((menu) => (
             <li
-              className="text-xl font-semibold Tablet:text-md Mobile:text-sm"
+              className="text-xl font-semibold Tablet:text-md Mobile:text-sm hover:text-green-200"
               key={menu.id}
             >
               <Link to={menu.to}>{menu.title}</Link>
