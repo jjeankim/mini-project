@@ -1,12 +1,50 @@
-# React + Vite
+# 경주 문화 관광 사이트
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+<br />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## 📄프로젝트 소개
+경주 문화 관광 사이트는 공공 데이터 포털의 open API를 활용하여 경주 관광을 위한 먹거리 핫플레이스, 카페, 관광지를 확인할 수 있습니다.
+React 기반 SPA로 구성되어 있습니다.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<br />
+
+
+## 📅개발 기간
+
+
+<br />
+
+
+## ⚙️기술 스택
+
+**Front-End**
+
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+<br />
+
+## 🔨 사용 라이브러리 및 도구
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white)
+![Dotenv](https://img.shields.io/badge/dotenv-000000?style=for-the-badge)
+
+<br />
+
+
+## 🧑‍💻프로젝트 주요 기능
+
+
+<br />
+
+
+## 💻 사용 예시
+
+
+
+
+
+
+
