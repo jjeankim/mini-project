@@ -32,7 +32,7 @@ React 기반 SPA로 구성되어 있습니다.
 
 ## 🔨 사용 라이브러리 및 도구
 
-<img src="https://img.shields.io/badge/React_Router-CA4245?style=flat-square&logo=reactrouter&logoColor=white" height="25"/> <img src="https://img.shields.io/badge/dotenv-000000?style=flat-square&logoColor=white" height="25"/> <img src="https://img.shields.io/badge/dompurify-00BFFF?style=flat-square&logo=purify&logoColor=white" height="25"/>
+<img src="https://img.shields.io/badge/React_Router-CA4245?style=flat-square&logo=reactrouter&logoColor=white" height="25"/> <img src="https://img.shields.io/badge/dotenv-000000?style=flat-square&logoColor=white" height="25"/> <img src="https://img.shields.io/badge/dompurify-00BFFF?style=flat-square&logo=purify&logoColor=white" height="25"/> <img src="https://img.shields.io/badge/Kakao_Map-FFCD00?style=flat-square&logo=kakaotalk&logoColor=000000" height="25"/>
 
 
 <br />
